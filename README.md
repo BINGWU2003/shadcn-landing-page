@@ -34,6 +34,8 @@ Build your React landing page effortlessly with the required sections to your pr
 
 ## How to install
 
+Requires Node.js `^22.18.0 || >=24.0.0` and pnpm. The project uses Vite 8 and Tailwind CSS 4 with CSS configuration in `src/index.css`.
+
 1. Clone this repository:
 
 ```bash
@@ -57,6 +59,15 @@ pnpm install
 ```bash
 pnpm dev
 ```
+
+Build and preview the production site:
+
+```bash
+pnpm build
+pnpm preview
+```
+
+For reproducible installs, use `pnpm install --frozen-lockfile`.
 
 ## Code quality
 
