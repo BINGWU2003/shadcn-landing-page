@@ -42,22 +42,17 @@ export const Services = () => {
           </h2>
 
           <p className="text-muted-foreground text-xl mt-4 mb-8 ">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-            dolor.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis dolor.
           </p>
 
           <div className="flex flex-col gap-8">
             {serviceList.map(({ icon, title, description }: ServiceProps) => (
               <Card key={title}>
                 <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
-                  <div className="mt-1 bg-primary/20 p-1 rounded-2xl">
-                    {icon}
-                  </div>
+                  <div className="mt-1 bg-primary/20 p-1 rounded-2xl">{icon}</div>
                   <div>
                     <CardTitle>{title}</CardTitle>
-                    <CardDescription className="text-md mt-2">
-                      {description}
-                    </CardDescription>
+                    <CardDescription className="text-md mt-2">{description}</CardDescription>
                   </div>
                 </CardHeader>
               </Card>

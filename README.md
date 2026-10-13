@@ -49,11 +49,40 @@ cd shadcn-landing-page
 3. Install dependencies
 
 ```bash
-npm install
+pnpm install
 ```
 
 4. Run project
 
 ```bash
-npm run dev
+pnpm dev
 ```
+
+## Code quality
+
+This project uses Oxlint for linting TypeScript and TSX files and Oxfmt for formatting.
+Run these commands from the project directory:
+
+```bash
+pnpm lint         # Check code; warnings fail the check
+pnpm lint:fix     # Apply safe automatic lint fixes
+pnpm format       # Format source, configuration, and documentation
+pnpm format:check # Check formatting without changing files
+pnpm build        # Type-check and build the production application
+```
+
+Lint rules are configured in `oxlint.config.ts`, preserving the existing ESLint,
+TypeScript, React Hooks, and Fast Refresh checks. Formatting rules are configured
+in `oxfmt.config.ts`, using Oxfmt's default style with import and Tailwind class
+sorting disabled. Dependencies, build output, and the pnpm lockfile are excluded
+from formatting.
+
+Both TypeScript configurations use `defineConfig` for type checking and editor
+autocomplete. Use Node.js 22.18.x or a later 22.x release, or Node.js 24 and newer,
+to load the TypeScript lint configuration.
+
+Shared styles are exported from `src/components/ui/button-variants.ts`,
+`src/components/ui/badge-variants.ts`, and
+`src/components/ui/navigation-menu-styles.ts`. Import `useTheme` from
+`src/components/theme-context.ts`. Component modules export components and types
+to keep Fast Refresh checks enabled.
