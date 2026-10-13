@@ -34,6 +34,8 @@ Build your React landing page effortlessly with the required sections to your pr
 
 ## How to install
 
+Requires Node.js `^20.19.0 || >=22.12.0` and pnpm. The project uses Vite 8 and Tailwind CSS 4 with CSS configuration in `src/index.css`.
+
 1. Clone this repository:
 
 ```bash
@@ -49,11 +51,20 @@ cd shadcn-landing-page
 3. Install dependencies
 
 ```bash
-npm install
+pnpm install
 ```
 
 4. Run project
 
 ```bash
-npm run dev
+pnpm dev
 ```
+
+Build and preview the production site:
+
+```bash
+pnpm build
+pnpm preview
+```
+
+For reproducible installs, use `pnpm install --frozen-lockfile`.
